@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: ea1db3ecaa0aa6649bd62f783e2f51d0
+timeCreated: 1487210847
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerSpriteSheet_0
+    21300002: PlayerSpriteSheet_1
+    21300004: PlayerSpriteSheet_2
+    21300006: PlayerSpriteSheet_3
+    21300008: PlayerSpriteSheet_4
+    21300010: PlayerSpriteSheet_5
+    21300012: PlayerSpriteSheet_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69, y: -57}
+        - {x: -82, y: -66}
+        - {x: -82, y: -89}
+        - {x: -71, y: -90}
+        - {x: 24, y: -90}
+        - {x: 31, y: -83}
+        - {x: 31, y: -60}
+        - {x: 11, y: -57}
+      - - {x: 32, y: 81}
+        - {x: -1, y: 92}
+        - {x: -26, y: 92}
+        - {x: -64, y: 9}
+        - {x: -64, y: -23}
+        - {x: -63, y: -31}
+        - {x: -51, y: -55}
+        - {x: -44, y: -56}
+        - {x: -4, y: -56}
+        - {x: 42, y: -15}
+        - {x: 66, y: 40}
+        - {x: 66, y: 64}
+    - name: PlayerSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: 48}
+        - {x: 17, y: 56}
+        - {x: -32, y: 56}
+        - {x: -70, y: -8}
+        - {x: -70, y: -48}
+        - {x: -69, y: -49}
+        - {x: -65, y: -55}
+        - {x: -53, y: -69}
+        - {x: -70, y: -80}
+        - {x: -70, y: -84}
+        - {x: -63, y: -89}
+        - {x: -55, y: -91}
+        - {x: -3, y: -91}
+        - {x: 13, y: -89}
+        - {x: 15, y: -80}
+        - {x: 50, y: -50}
+        - {x: 67, y: 5}
+    - name: PlayerSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: -100}
+        - {x: 3, y: -98}
+        - {x: 0, y: -97}
+        - {x: -2, y: -100}
+      - - {x: 54, y: -28}
+        - {x: 46, y: -30}
+        - {x: 48, y: -30}
+        - {x: 54, y: -23}
+        - {x: 55, y: -20}
+        - {x: 55, y: -15}
+        - {x: 50, y: -11}
+        - {x: 44, y: -9}
+        - {x: 34, y: -5}
+        - {x: 3, y: 2}
+        - {x: -24, y: 2}
+        - {x: -65, y: -50}
+        - {x: -69, y: -59}
+        - {x: -69, y: -80}
+        - {x: -53, y: -98}
+        - {x: 25, y: -98}
+        - {x: 82, y: -43}
+        - {x: 82, y: -15}
+        - {x: 55, y: -23}
+    - name: PlayerSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -30}
+        - {x: -64, y: -61}
+        - {x: -64, y: -91}
+        - {x: -59, y: -100}
+        - {x: 30, y: -100}
+        - {x: 88, y: -62}
+        - {x: 88, y: -41}
+        - {x: 23, y: -30}
+    - name: PlayerSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: -65}
+        - {x: -75, y: -70}
+        - {x: -75, y: -100}
+        - {x: 35, y: -100}
+        - {x: 74, y: -87}
+        - {x: 74, y: -65}
+    - name: PlayerSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 98}
+        - {x: 9, y: 100}
+        - {x: 4, y: 100}
+        - {x: 6, y: 97}
+    - name: PlayerSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 98}
+        - {x: -4, y: 100}
+        - {x: -9, y: 100}
+        - {x: -7, y: 97}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
