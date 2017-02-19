@@ -6,39 +6,27 @@ public class PlayerMoveController : MonoBehaviour {
 
 
     private float playerMoveSpeed = 0.03f;
-    private float audioTimer = 0.8f;
 
     protected Vector2 move;
 
     private SpriteRenderer playerSpriteRenderer;
 
-
-    //private AudioSource audio;
-
     void Start()
     {
         playerSpriteRenderer = this.GetComponent<SpriteRenderer>();
-        //audio = GetComponent<AudioSource>();
     }
 
     void Update ()
     {
         move = GetInputVector(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         this.transform.Translate(move * playerMoveSpeed);
-/*
-        audioTimer -= Time.deltaTime;
-
-        if (audioTimer <= 0)
-        {
-            audio.Play();
-            audioTimer = 0.7f;
-        }*/
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "playerObstacle")
+        if(collider.gameObject.tag == "PlayerObstacle")
         {
+            Debug.Log("test");
             Destroy(this.gameObject);
         }
     }

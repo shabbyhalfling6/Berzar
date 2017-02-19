@@ -15,13 +15,11 @@ public class BulletController : MonoBehaviour {
         Destroy(this.gameObject, bulletLifeTime);
     }
 
-    public void RotateBullet()
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        // Get Angle to mouse position in Radians
-        float AngleRad = Mathf.Atan2(Camera.main.ScreenToWorldPoint(Input.mousePosition).y - this.transform.position.y, Camera.main.ScreenToWorldPoint(Input.mousePosition).x - this.transform.position.x);
-        // Convert angle to Degrees
-        float AngleDeg = (90 / Mathf.PI) * AngleRad;
-        // Rotate towards mouse 
-        this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
+        if (collider.gameObject.tag == "PlayerObstacle")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
