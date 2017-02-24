@@ -3,59 +3,67 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-    private float enemyMoveSpeed = 1.5f;
+    private float enemyMoveSpeed = 0.5f;
     private float smoothFactor = 1.0f;
     private float timer = 0.0f;
     private float enemyFireRate = 1.0f;
 
     protected Vector2 move;
+    private Vector2 startPosition;
 
     public GameObject bulletPrefab;
     private GameObject player;
 
-    enemyState currentState;
+    public enemyState currentState;
 
-    enum enemyState
+    public enum enemyState
     {
-        eesPatrol = 0,
-        eesShootPlayer,
-        eesShootNothing,
-        eesShootFriendlies
+        Patrol = 0,
+        ShootPlayer,
+        ShootNothing,
+        ShootFriendlies,
+        NumStates
     }
 
     void Start()
     {
         timer = enemyFireRate;
+        player = GameObject.Find("Player");
+        startPosition = transform.position;
     }
 
 	void Update ()
     {
-
-
+        if (player == null)
+            currentState = enemyState.Patrol;
+        
         switch (currentState)
         {
-            case enemyState.eesPatrol:
+            case enemyState.Patrol:
              
                 timer -= Time.deltaTime;
 
                 if (timer <= 0)
                 {
-                    move.x = Random.Range(-1, 1);
-                    move.y = Random.Range(-1, 1);
+                    move.x = Random.Range(enemyMoveSpeed * Time.deltaTime * - 1, enemyMoveSpeed * Time.deltaTime * 1);
+                    move.y = Random.Range(enemyMoveSpeed * Time.deltaTime * - 1, enemyMoveSpeed * Time.deltaTime * 1);
 
                     timer = 2.0f;
                 }
-        
+
+                transform.Translate(move);
+
                 break;
-            case enemyState.eesShootPlayer:
+            case enemyState.ShootPlayer:
                 timer -= Time.deltaTime;
 
                 if (timer <= 0)
                 {
-                    GameObject bulletInstance = (GameObject)Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
+                    startPosition = transform.position;
+                    GameObject bulletInstance = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
 
                     // Get Angle to mouse position in Radians
-                    float AngleRad = Mathf.Atan2(player.transform.position.y - this.transform.position.y, player.transform.position.x - this.transform.position.x);
+                    float AngleRad = Mathf.Atan2(player.transform.position.y - transform.position.y, player.transform.position.x - transform.position.x);
                     // Convert angle to Degrees
                     float AngleDeg = (90 / Mathf.PI) * AngleRad;
                     // Rotate towards mouse 
@@ -64,21 +72,17 @@ public class EnemyController : MonoBehaviour {
                     timer = enemyFireRate;
                 }
                 break;
-            case enemyState.eesShootNothing:
+            case enemyState.ShootNothing:
                 break;
-            case enemyState.eesShootFriendlies:
+            case enemyState.ShootFriendlies:
                 break;
         }
 
-       this.transform.position = Vector2.Lerp(this.transform.position, move * enemyMoveSpeed, Time.deltaTime * smoothFactor);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
-            currentState = enemyState.eesShootPlayer;
-            player = collider.gameObject;
-        }
+        if (collider.gameObject.tag == "PlayerBullet")
+            Destroy(this.gameObject);
     }
 }

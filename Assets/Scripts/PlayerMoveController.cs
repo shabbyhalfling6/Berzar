@@ -16,17 +16,16 @@ public class PlayerMoveController : MonoBehaviour {
         playerSpriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
-    void Update ()
+    void FixedUpdate ()
     {
         move = GetInputVector(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         this.transform.Translate(move * playerMoveSpeed);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
         if(collider.gameObject.tag == "PlayerObstacle")
         {
-            Debug.Log("test");
             Destroy(this.gameObject);
         }
     }

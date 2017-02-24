@@ -11,13 +11,11 @@ public class BulletController : MonoBehaviour {
 	void FixedUpdate ()
     {
         transform.Translate(transform.right * bulletMoveSpeed);
-
-        Destroy(this.gameObject, bulletLifeTime);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "PlayerObstacle")
+        if (this.tag == "PlayerBullet" && collider.gameObject.tag == "PlayerObstacle")
         {
             Destroy(this.gameObject);
         }
